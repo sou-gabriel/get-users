@@ -16,4 +16,4 @@ Meu objetivo desenvolvendo essa aplicação foi botar em prática todos os conhe
 ### Tecnologias
 - HTML
 - CSS 
-- javaScript
+- JavaScript
