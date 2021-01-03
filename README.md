@@ -10,17 +10,15 @@ Trata-se de uma página que busca e exibe dados de usuários fictícios. Estes d
 - Display grid;
 - Filtragem de múltiplos itens.
 
-## 🔗 Link da aplicação
+### Tecnologias empregadas
+- HTML
+- CSS
+- JavaScript
+
+### Link da aplicação
 Você pode acessar facilmente a aplicaçao clicando [aqui](https://lucid-euclid-8c128f.netlify.app/).
 
-## 🖥️ Tecnologias que pratiquei
-<p>
-  <img src="https://devicons.github.io/devicon/devicon.git/icons/javascript/javascript-original.svg" alt="javascript" width="50" height="50"/> 
-  <img src="https://devicons.github.io/devicon/devicon.git/icons/html5/html5-original.svg" alt="html5" width="50" height="50"/>  
-  <img src="https://devicons.github.io/devicon/devicon.git/icons/css3/css3-original.svg" alt="css3" width="50" height="50"/> 
-</p>
-
-## 📲 Contato
+### Contato
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gabriel-ramos-586656179/)](https://www.linkedin.com/in/gabriel-ramos-586656179/)
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-D14836?&style=flat-square&logo=Gmail&logoColor=white&link=mailto:dev.gabrielramos@gmail.com)](mailto:dev.gabrielramos@gmail.com)
 
