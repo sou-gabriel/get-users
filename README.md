@@ -7,7 +7,8 @@ Trata-se de uma página que busca e exibe dados de usuários fictícios. Estes d
 - Requisições HTTP com o método global ```fetch()```;
 - Promises;
 - Tratamento de promises com os métodos: ```then()``` e ```catch()```;
-- Display grid;
+- Async/await;
+- Display grid; 
 - Filtragem de múltiplos itens.
 
 ### Tecnologias empregadas
