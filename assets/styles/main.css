@@ -1,0 +1,115 @@
+.main {  
+  width: 80vw; 
+  min-width: 685px; 
+  margin: 50px auto;
+  background-color: #eff8ff;
+  padding: 35px 15px;
+  border-radius: 4px;
+}
+
+.title {
+  font-size: max(36px, 3.2vw);
+  font-weight: 700;  
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form { 
+  width: max(300px, 25vw);
+  margin: 0 auto 35px;
+}
+
+.search {
+  padding: 10px 0 10px 15px;
+  outline: none;
+  width: 100%;
+  border-radius: 50px;
+  border: none;  
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.068);
+}
+
+.users-container {  
+  padding: 20px;
+  background-color: rgba(154, 136, 255, 0.233);
+  margin-bottom: 50px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  grid-auto-flow: row;
+  column-gap: 20px;
+  row-gap: 25px;
+}
+
+.card {
+  border-radius: 2px;
+  background-color: #98ff;
+  padding: 10px 0 30px 10px;  
+  transition: transform 200ms;
+  min-width: 185px;  
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.02); 
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.452); 
+}
+
+.paragraph-name, 
+.paragraph-username,
+.link-website {
+  font-size: 13.8px;
+}
+
+.paragraph small {
+  text-transform: lowercase;
+  font-weight: 500;
+  color: rgba(221, 221, 221, 0.877);
+}
+
+.paragraph-name {  
+  font-weight: 600;  
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.paragraph-username {
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 600;  
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.link-website {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  background-color: #0e49b5;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 2px;  
+}
+
+.comands {  
+  text-align: center;
+}
+
+.button {
+  background: #9365FE;
+  font-weight: 700;
+  padding: 12px 32px;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border-radius: 2px;
+  border: none;
+}
+
+.button:first-child {
+  margin-right: 20px;
+}

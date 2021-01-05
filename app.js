@@ -1,30 +1,32 @@
-const getUsersButton = document.querySelector('[data-users="get"]')
-const usersContainer = document.querySelector('.main__users-container')
-const clearUsersButton = document.querySelector('[data-users="clear"]')
-const inputSearchUsers = document.querySelector('input[name="search"]')
+const getUsersButton = document.querySelector('[data-js="get-users"]')
+const usersContainer = document.querySelector('.users-container')
+const clearUsersButton = document.querySelector('[data-js="clear-users"]')
+const inputSearchUser = document.querySelector('[data-js="search"]')
 const deleteCardButton = document.querySelector('.card__close')
 
-const getUsers = () => {
-  fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(users => {
-      users.forEach((user) => {
-        usersContainer.innerHTML += `
-          <div class="card appear">
-            <p class="card__name">
-              <small>Nome:</small>
-              ${user.name}
-            </p>
-            <p class="card__username">
-              <small>Usuário:</small>
-              ${user.username}
-            </p>
-            <a class="card__website" href="${user.website}">Acesse meu website</a>
-          </div> 
-        `
-      })      
-    })
-    .catch(error => console.log(error))
+const fetchUsers = async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/users')
+  return await response.json()
+}
+
+const generateUserCards = async () => {
+  const users = await fetchUsers()
+
+  users.forEach(({ name, username, website }) => {
+    usersContainer.innerHTML += `
+      <div class="card appear">
+        <p class="paragraph paragraph-name">
+          <small>Nome:</small>
+          ${name}
+        </p>
+        <p class="paragraph paragraph-username">
+          <small>Usuário:</small>
+          ${username}
+        </p>
+        <a class="link-website" href="${website}">Acesse meu website</a>
+      </div> 
+    `
+  })
 }
 
 const setUsersContainerVisibility = isToShow => {
@@ -37,10 +39,10 @@ const setUsersContainerVisibility = isToShow => {
 }
 
 const clearUsers = () => usersContainer.innerHTML = null
- 
+
 const filterUsers = (inputValue, usersCards, isUserMatched) => {
   return usersCards.filter(userCard => {
-    const paragraphUserName = userCard.querySelector('.card__name')
+    const paragraphUserName = userCard.querySelector('.paragraph-name')
     const isMatch = paragraphUserName.textContent.toLowerCase().includes(inputValue)
     return isUserMatched ? isMatch : !isMatch
   })
@@ -55,7 +57,6 @@ const setCardVisibility = (usersCards, classToRemove, classToAdd) => {
 
 const hideUsers = (inputValue, usersCards) => {
   const users = filterUsers(inputValue, usersCards, false)
-  console.log('oi')
   setCardVisibility(users, 'appear', 'hidden')
 }
 
@@ -65,7 +66,7 @@ const showUsers = (inputValue, usersCards) => {
 }
 
 const searchUsers = event => {
-  const inputValue = event.target.value.toLowerCase().trim()  
+  const inputValue = event.target.value.toLowerCase().trim()
 
   const usersCards = Array.from(usersContainer.children)
 
@@ -74,11 +75,13 @@ const searchUsers = event => {
 }
 
 getUsersButton.addEventListener('click', () => {
-  getUsers()
+  generateUserCards()
   setUsersContainerVisibility(true)
 })
+
 clearUsersButton.addEventListener('click', () => {
   clearUsers()
   setUsersContainerVisibility(false)
 })
-inputSearchUsers.addEventListener('input', searchUsers)
+
+inputSearchUser.addEventListener('input', searchUsers)

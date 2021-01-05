@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Usuários</title>
+  <title>Obtém usuários</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/styles/style.css">
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <link rel="stylesheet" href="assets/styles/manipulations.css">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,17 +16,17 @@
 </head>
 <body>
   <main class="main">
-    <h1 class="main__title">Usuários</h1>
+    <h1 class="title">Obtém usuários</h1>
 
-    <form class="main__form">
-      <input class="main__search" name="search" type="text" placeholder="Filtrar nome de usuário">
+    <form class="form">
+      <input class="search" data-js="search" type="text" placeholder="Filtrar nome de usuário">
     </form>
 
-    <div class="main__users-container hidden"></div>
+    <div class="users-container hidden"></div>
 
-    <div class="main__comands">
-      <button class="button" data-users="get">Obter usuários</button>
-      <button class="button" data-users="clear">Limpar usuários</button>
+    <div class="comands">
+      <button class="button" data-js="get-users">Obter usuários</button>
+      <button class="button" data-js="clear-users">Limpar usuários</button>
     </div>   
   </main>
 
